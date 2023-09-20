@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 Widget centralImage() {
@@ -28,6 +30,79 @@ Widget centralImage() {
             "assets/milly.png",
             width: 342,
             height: 416,
+          ),
+        ),
+        Positioned(
+            left: 15,
+            top: 40,
+            child: Column(
+              children: [
+                Image.asset(
+                  "assets/fb.png",
+                  height: 34,
+                  width: 34,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                CircleAvatar(
+                  backgroundColor: const Color(0xFF0D0D0D).withOpacity(0.45),
+                  radius: 17,
+                  child: Image.asset("assets/instagram.png"),
+                ),
+              ],
+            )),
+        Positioned(
+          left: 15,
+          top: 300, // Adjust the top position as needed
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(59), // Circular border radius
+            ),
+            width: 293,
+            height: 69,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius:
+                    BorderRadius.circular(59), // Circular border radius
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(59),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(
+                    sigmaX: 2.0,
+                    sigmaY: 2.0,
+                  ), // Adjust the blur intensity
+                  child: Container(
+                    width: 293,
+                    height: 69,
+                    decoration: BoxDecoration(
+                      // gradient: LinearGradient(
+                      //   colors: [
+                      //     const Color(0xFFc4c4c4).withOpacity(0.92),
+                      //     const Color(0xFFffffff)
+                      //   ],
+                      //   stops: const [0.08, 1.0], // 8% gradient stop
+                      //   begin: Alignment.topLeft,
+                      //   end: Alignment.bottomRight,
+                      // ),
+                      color: const Color(0xFF7a2d4a).withOpacity(0.2),
+                      borderRadius:
+                          BorderRadius.circular(59), // Circular border radius
+                      border: Border.all(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        radius: 25.5,
+                        child: Image.asset("assets/milly_small_circular.png"),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
         ),
       ],
