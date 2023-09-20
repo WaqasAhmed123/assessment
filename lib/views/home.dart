@@ -1,4 +1,6 @@
+import 'package:assessment/widgets/central_image.dart';
 import 'package:assessment/widgets/circular_image.dart';
+import 'package:assessment/widgets/make_friends.dart';
 import 'package:assessment/widgets/my_story.dart';
 import 'package:flutter/material.dart';
 
@@ -54,29 +56,49 @@ class _HomeState extends State<Home> {
                 )
               ],
             ),
-            SizedBox(height: 30,),
+            const SizedBox(
+              height: 30,
+            ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  circularImage(
-                      context: context,
-                      image: 'assets/amelia.png',
-                      name: "Amelia"),
-                  circularImage(
-                      context: context,
-                      image: 'assets/amelia.png',
-                      name: "Amelia"),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: circularImage(
+                        context: context,
+                        image: 'assets/amelia.png',
+                        name: "Amelia"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: circularImage(
+                        context: context,
+                        image: 'assets/selena.png',
+                        name: "Selena"),
+                  ),
                   myStory(context: context),
-                  circularImage(
-                      context: context, image: 'assets/isla.png', name: "Isla"),
-                  circularImage(
-                      context: context, image: 'assets/freya.png', name: "Freya"),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: circularImage(
+                        context: context,
+                        image: 'assets/isla.png',
+                        name: "Isla"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: circularImage(
+                        context: context,
+                        image: 'assets/freya.png',
+                        name: "Freya"),
+                  ),
                 ],
               ),
-            )
+            ),
+            makeFriends(),
+            Expanded(child: centralImage())
           ],
         ),
       ),
