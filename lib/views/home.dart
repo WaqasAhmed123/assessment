@@ -35,7 +35,6 @@ class _HomeState extends State<Home> {
                 CircleAvatar(
                   radius: 16.5,
                   backgroundColor: Colors.transparent,
-                  // backgroundImage: const AssetImage('assets/profile_image.png'),
                   child: Container(
                     width: 33.0,
                     height: 33.0,
@@ -57,7 +56,7 @@ class _HomeState extends State<Home> {
               ],
             ),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -101,38 +100,48 @@ class _HomeState extends State<Home> {
             ),
             makeFriends(),
             Expanded(child: centralImage()),
-            SizedBox(
+            Container(
               height: 81,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(63),
-                child: BottomAppBar(
-                  height: 81,
-                  color: const Color(0xFF1A1A1A),
-                  // notchMargin: 10,
-                  // shape: AutomaticNotchedShape(
-                  // CircleBorder(),
-                  //   StadiumBorder(),
-                  // ),
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        padding: EdgeInsets.zero,
-                        children: [
-                          Container(
-                            height: 81,
-                            width: 40,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Color(0xFFFF3062),
-                            ),
-                            child: const Center(
-                              child: Icon(Icons.home, color: Colors.white),
-                            ),
-                          ),
-                        ]),
-                  ),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A1A1A),
+                border: Border.all(),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(63),
                 ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(right: 40),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        radius: 81 / 2,
+                        backgroundColor: const Color(0xFFFF3062),
+                        child: Image.asset('assets/home.png'),
+                      ),
+                      const Center(
+                        child: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 28,
+                        ),
+                      ),
+                      Center(
+                        child: Image.asset(
+                          'assets/chat_line.png',
+                          height: 28,
+                          width: 28,
+                        ),
+                      ),
+                      Center(
+                        child: Image.asset(
+                          'assets/person.png',
+                          height: 28,
+                          width: 28,
+                        ),
+                      ),
+                    ]),
               ),
             ),
             // implement the big floating action button

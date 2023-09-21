@@ -70,21 +70,13 @@ Widget centralImage() {
                 borderRadius: BorderRadius.circular(59),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(
-                    sigmaX: 2.0,
-                    sigmaY: 2.0,
+                    sigmaX: 10.0,
+                    sigmaY: 10.0,
                   ), // Adjust the blur intensity
                   child: Container(
                     width: 293,
                     height: 69,
                     decoration: BoxDecoration(
-                      // gradient: LinearGradient(
-                      //   colors: [
-                      //     const Color(0xFFc4c4c4).withOpacity(0.92),
-                      //     const Color(0xFFffffff)
-                      //   ],
-                      //   stops: const [0.08, 1.0], // 8% gradient stop
-                      //   begin: Alignment.topLeft,
-                      //   end: Alignment.bottomRight,
                       // ),
                       color: const Color(0xFF7a2d4a).withOpacity(0.2),
                       borderRadius:
@@ -111,15 +103,8 @@ Widget centralImage() {
                               fontFamily: "Inter",
                               fontSize: 11,
                               color: Colors.white)),
-                      trailing:
-                          // const Icon(
-                          //   Icons.cancel_rounded,
-                          //   size: 43,
-                          //   color: Color(0xFFFF3062),
-                          // )
-                          Row(
+                      trailing: Row(
                         mainAxisSize: MainAxisSize.min,
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           CircleAvatar(
                             backgroundColor: const Color(0xFFFF3062),
