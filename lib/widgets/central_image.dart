@@ -98,6 +98,52 @@ Widget centralImage() {
                         radius: 25.5,
                         child: Image.asset("assets/milly_small_circular.png"),
                       ),
+                      title: const Text(
+                        "Milly",
+                        style: TextStyle(
+                            fontFamily: "SFProRounded",
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                      subtitle: const Text("London, UK",
+                          style: TextStyle(
+                              fontFamily: "Inter",
+                              fontSize: 11,
+                              color: Colors.white)),
+                      trailing:
+                          // const Icon(
+                          //   Icons.cancel_rounded,
+                          //   size: 43,
+                          //   color: Color(0xFFFF3062),
+                          // )
+                          Row(
+                        mainAxisSize: MainAxisSize.min,
+                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: const Color(0xFFFF3062),
+                            radius: 22.5,
+                            child: Image.asset("assets/cross.png"),
+                          ),
+                          const SizedBox(
+                            width: 8,
+                          ),
+                          Container(
+                            width: 22.5 * 2,
+                            height: 22.5 * 2,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              gradient: LinearGradient(
+                                colors: [Color(0xFF6100ff), Color(0xffff003d)],
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                              ),
+                            ),
+                            child: Image.asset("assets/heart.png"),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

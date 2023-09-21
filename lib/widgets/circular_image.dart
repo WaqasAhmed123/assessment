@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget circularImage({
-  continerHeight,
-  continerWidth,
-  image,
-  name,
-  context
-}) {
-  return Container(
+Widget circularImage({continerHeight, continerWidth, image, name, context}) {
+  return SizedBox(
     width: 49,
-    height: 115,
+    // height: 115,
+    height: 90.2,
+
+    // height: 115,
     child: Column(
       children: [
         Container(
@@ -33,8 +30,13 @@ Widget circularImage({
                 ),
               ),
             )),
-            SizedBox(height: 5,),
-            Text(name,style: Theme.of(context).textTheme.bodyMedium,)
+        const SizedBox(
+          height: 5,
+        ),
+        Text(
+          name,
+          style: Theme.of(context).textTheme.bodyMedium,
+        )
       ],
     ),
   );
