@@ -5,7 +5,6 @@ Widget myStory({context}) {
       width: 65,
       height: 90.2,
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
             width: 62.35,

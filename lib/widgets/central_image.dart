@@ -54,17 +54,16 @@ Widget centralImage() {
             )),
         Positioned(
           left: 15,
-          top: 300, // Adjust the top position as needed
+          top: 300,
           child: Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(59), // Circular border radius
+              borderRadius: BorderRadius.circular(59),
             ),
             width: 293,
             height: 69,
             child: Container(
               decoration: BoxDecoration(
-                borderRadius:
-                    BorderRadius.circular(59), // Circular border radius
+                borderRadius: BorderRadius.circular(59),
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(59),
@@ -72,15 +71,13 @@ Widget centralImage() {
                   filter: ImageFilter.blur(
                     sigmaX: 10.0,
                     sigmaY: 10.0,
-                  ), // Adjust the blur intensity
+                  ),
                   child: Container(
                     width: 293,
                     height: 69,
                     decoration: BoxDecoration(
-                      // ),
                       color: const Color(0xFF7a2d4a).withOpacity(0.2),
-                      borderRadius:
-                          BorderRadius.circular(59), // Circular border radius
+                      borderRadius: BorderRadius.circular(59),
                       border: Border.all(
                         color: Colors.transparent,
                       ),
